@@ -14,8 +14,8 @@ class Pomodoro {
     }
 }
 
-const tasks = [];
-const pomodoros = [];
+var tasks = [];
+var pomodoros = [];
 
 //TASK FUNCTIONS
 
@@ -69,6 +69,11 @@ const addTaskToPomodoro = (pomodoroName, taskName) => {
 
 
 module.exports = {
+    tasks,
+    pomodoros,
+    addTask,
+    completeTask,
     addTaskToPomodoro,
     markTaskAsUncompleted,
+    createPomodoro
 }

@@ -1,4 +1,4 @@
-const addTaskToPomodoro = require('../src/todoApp.js'); // Ajusta la ruta según tu estructura de carpetas
+const todoApp = require('../src/todoApp.js'); // Ajusta la ruta según tu estructura de carpetas
 
 test('adds a task to a pomodoro', () => {
   const mockPomodoro = {
@@ -10,7 +10,20 @@ test('adds a task to a pomodoro', () => {
     done: false,
   };
 
-  addTaskToPomodoro(mockPomodoro, mockTask);
+  const mockTask2 = {
+    name: 'Mock Task 2',
+    done: false,
+  };
 
-  expect(mockPomodoro.tasks).toContain(mockTask);
+  todoApp.createPomodoro(mockPomodoro.name, 25);
+  todoApp.addTask(mockTask.name);
+
+  todoApp.addTaskToPomodoro(mockPomodoro.name, mockTask.name);
+
+  const pomodoro = todoApp.pomodoros.find(p => p.name === mockPomodoro.name);
+
+
+
+  expect(pomodoro.tasks).toContainEqual(mockTask);
+  expect(pomodoro.tasks).not.toContainEqual(mockTask2);
 });

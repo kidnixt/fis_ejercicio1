@@ -1,12 +1,15 @@
-const markTaskAsUncompleted = require('../src/todoApp'); // Ajusta la ruta según tu estructura de carpetas
+const todoApp = require('../src/todoApp'); // Ajusta la ruta según tu estructura de carpetas
 
 test('marks a task as incomplete', () => {
   const mockTask = {
     name: 'Mock Task',
-    done: true,
-  };
+  }
 
-  markTaskAsUncompleted(mockTask);
+  todoApp.addTask(mockTask.name);
+  todoApp.completeTask(mockTask.name);
+  todoApp.markTaskAsUncompleted(mockTask.name);
 
-  expect(mockTask.done).toBe(false);
+  const task = todoApp.tasks.find(task => task.name === mockTask.name);
+
+  expect(task.done).toBe(false);
 });
