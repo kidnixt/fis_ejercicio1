@@ -58,3 +58,9 @@ const changePomodoroDuration = (pomodoroName, newDuration) => {
 const addTaskToPomodoro = (pomodoro, task) => {
     // TODO
 }
+
+
+module.exports = {
+    addTaskToPomodoro,
+    markTaskAsUncompleted,
+}
