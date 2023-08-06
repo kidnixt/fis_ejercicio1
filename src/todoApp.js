@@ -33,7 +33,7 @@ const completeTask = (name) => {
     task.done = true;
 }
 
-const markTaskIncomplete = (name) => {
+const markTaskAsUncompleted = (name) => {
     const task = tasks.find(task => task.name === name);
     if (task) {
         task.done = false;
