@@ -12,6 +12,9 @@ Dada la siguiente imagen de un grafo de "depedencias" entre las ramas de un repo
 
 * Poner en orden cronologico los comandos gits que se utilizaron para poder realizar el grafo de la imagen.
 
+![Image](https://i.imgur.com/iqAABQ6.png)
+
+
 ### Aclaraciones:
 * Cada nodo es un commit.
 * Hay tres ramas con su nombre correspondiente.
