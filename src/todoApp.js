@@ -34,10 +34,7 @@ const completeTask = (name) => {
 }
 
 const markTaskAsUncompleted = (name) => {
-    const task = tasks.find(task => task.name === name);
-    if (task) {
-        task.done = false;
-    }
+    //TODO
 }
 
 //POMODORO FUNCTIONS
@@ -59,12 +56,7 @@ const changePomodoroDuration = (pomodoroName, newDuration) => {
 }
 
 const addTaskToPomodoro = (pomodoroName, taskName) => {
-    const pomodoro = pomodoros.find(p => p.name === pomodoroName);
-    const task = tasks.find(t => t.name === taskName);
-    
-    if (pomodoro && task) {
-        pomodoro.tasks.push(task);
-    }
+    //TODO
 }
 
 
