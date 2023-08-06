@@ -40,7 +40,7 @@ A continuación las funcionalidades que se deben implementar:
 Se quiere poder "desmarcar" una tarea que fue completada y que su nuevo estado sea "no completada". 
 La firma del metodo será la siguiente:
 ```javascript 
-const markTaskAsUncompleted = (task) => {
+const markTaskAsUncompleted = (name) => {
     // TODO
 }
 ```
@@ -49,7 +49,7 @@ const markTaskAsUncompleted = (task) => {
 Se quiere poder modificar la clase pomodoro permitiendo que también puede tener una lista de tareas asociadas.
 También se quiere poder agregar una tarea a un pomodoro. La firma del método será la siguiente
 ```javascript
-const addTaskToPomodoro = (pomodoro, task) => {
+const addTaskToPomodoro = (pomodoroName, taskName) => {
     // TODO
 }
 ```
